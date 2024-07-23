@@ -1,0 +1,20 @@
+name: Trigger After Static Checks
+
+on:
+  pull_request_target:
+    branches:
+      - develop
+
+#on:
+#  workflow_run:
+#    workflows: [Static Checks]
+#    types:
+#      - completed
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger
+        run: echo "Triggering"
