@@ -7,7 +7,7 @@ name: Trigger After Static Checks
 
 on:
   workflow_run:
-    workflows: [Static Checks]
+    workflows: ["Static Checks"]
     types:
       - completed
 
