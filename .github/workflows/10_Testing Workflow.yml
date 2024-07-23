@@ -1,5 +1,6 @@
 name: 10. Testing Workflow
-
+on:
+  - workflow_dispatch
 jobs:
   runs-on: ubuntu-latest
 
