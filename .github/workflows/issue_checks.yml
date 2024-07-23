@@ -7,7 +7,7 @@ on:
     types: [closed, reopened]
 
 concurrency:
-  group: cancel-workflow-same-group-name
+  group: cancel-workflow-same-group-2
   cancel-in-progress: true
 
 permissions:
