@@ -4,9 +4,8 @@ name: Unit Tests Trigger
 # events or push events in the develop branch.
 on:
   workflow_run:
-    workflows: [Unit Tests (Robolectric - Bazel)]
-    types:
-      - completed
+    workflows: ['Unit Tests (Robolectric - Bazel)']
+    types: [completed]
   workflow_dispatch:
 
 #on:
