@@ -16,6 +16,7 @@ jobs:
       - name: Trigger
         run: echo "Triggering"
 
+
 ## Contains jobs corresponding to unit tests. Integration (e.g. emulator or screenshot testing) or End-to-End tests should not be triggered here.
 #name: Unit Tests Trigger
 ## Controls when the action will run. Triggers the workflow on pull request
