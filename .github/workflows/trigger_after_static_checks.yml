@@ -5,9 +5,9 @@ name: Unit Tests Trigger
 on:
   workflow_run:
     workflows: [Unit Tests (Robolectric - Bazel)]
-    types:
-      - completed
-  workflow_dispatch:
+    types: [completed]
+    branches:
+      - 'develop'
 
 #on:
 #  workflow_dispatch:
