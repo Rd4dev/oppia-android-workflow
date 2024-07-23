@@ -1,13 +1,8 @@
 name: Trigger After Static Checks
 
-#on:
-#  pull_request_target:
-#    branches:
-#      - develop
-
 on:
   workflow_run:
-    workflows: ["Static Checks"]
+    workflows: [Static Checks]
     types:
       - completed
 
