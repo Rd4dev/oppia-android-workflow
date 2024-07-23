@@ -13,4 +13,3 @@ jobs:
     steps:
       - name: Trigger
         run: echo "Triggering"
-
