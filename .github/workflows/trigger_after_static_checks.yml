@@ -1,12 +1,10 @@
 name: Trigger Workflow
 
 on:
-  workflow_dispatch:
-  pull_request:
-  push:
-    branches:
-      # Push events on develop branch
-      - develop
+  workflow_run:
+    workflows: ["Oppia bot Workflow"]
+    types:
+      - completed
 
 jobs:
   trigger:
