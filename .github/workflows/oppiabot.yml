@@ -32,7 +32,7 @@ on:
       - develop
 
 jobs:
-  trigger:
+  oppia:
     runs-on: ubuntu-latest
 
     steps:
