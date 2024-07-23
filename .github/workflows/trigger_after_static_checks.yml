@@ -3,8 +3,7 @@ name: Trigger After Static Checks
 on:
   workflow_run:
     workflows: ["Static Checks"]
-    types:
-      - completed
+    types: [completed]
 
 jobs:
   trigger:
