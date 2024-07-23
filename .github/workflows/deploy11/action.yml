@@ -1,0 +1,11 @@
+name: 11. Workflow Run Event
+description: Sets up the Android & Bazel build environments for Oppia Android
+runs:
+  using: composite
+
+  steps:
+    - name: Deploy Application
+      shell: bash
+      run: |
+        echo "Starting Deploying the Application"
+        echo "Application Deployed"
