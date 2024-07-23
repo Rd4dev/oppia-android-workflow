@@ -73,7 +73,7 @@ class TestFileCheck(
     }
 
     if (matchedFiles.isNotEmpty()) {
-      throw Exception("TEST FILE CHECK FAILED")
+      throw Exception("TEST FILE CHECK FAILED ")
     } else {
       println("TEST FILE CHECK PASSED ")
     }
