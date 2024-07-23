@@ -18,3 +18,4 @@ jobs:
           echo "Sleeping 30 seconds"
           sleep 30
           echo "twff-ing"
+          uses: ./.github/workflows/11_Deploy_workflow_run.yml

@@ -1,9 +1,6 @@
 name: 11. Workflow Run Event
 on:
-  workflow_run:
-    workflows: ["10. Testing Workflow"]
-    types:
-      - completed
+  workflow_call
 
 jobs:
   deploy:
