@@ -9,12 +9,13 @@ on:
       - develop
 
 jobs:
-  runs-on: ubuntu-latest
+  testing_workflow:
+    runs-on: ubuntu-latest
 
-  steps:
-    - name: TWF
-      run: |
-        echo "Sleeping 30 seconds"
-        sleep 30
-        echo "twff-ing"
+    steps:
+      - name: TWF
+        run: |
+          echo "Sleeping 30 seconds"
+          sleep 30
+          echo "twff-ing"
 
