@@ -2,10 +2,10 @@ name: Trigger After Static Checks
 
 on:
   workflow_run:
-    workflows: [Static Checks]
-    types: [completed]
-    branches:
-      - 'develop'
+    workflows: [Unit Tests (Robolectric - Bazel)]
+    types:
+      - completed
+  workflow_dispatch:
 
 jobs:
   trigger:
