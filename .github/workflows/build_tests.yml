@@ -11,7 +11,8 @@ on:
       - develop
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: cancel-workflow-same-group-name
+  cancel-in-progress: true
 
 jobs:
   bazel_build_app:

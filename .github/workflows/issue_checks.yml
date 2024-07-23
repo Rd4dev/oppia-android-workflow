@@ -7,7 +7,8 @@ on:
     types: [closed, reopened]
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: cancel-workflow-same-group-name
+  cancel-in-progress: true
 
 permissions:
   issues: write
