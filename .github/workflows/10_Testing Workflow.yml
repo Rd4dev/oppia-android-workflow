@@ -1,6 +1,12 @@
 name: 10. Testing Workflow
+
 on:
-  - workflow_dispatch
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      # Push events on develop branch
+      - develop
 
 jobs:
   runs-on: ubuntu-latest
