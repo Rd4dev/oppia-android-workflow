@@ -37,5 +37,8 @@ jobs:
 
     steps:
       - name: Oppia
-        run: echo "Oppia-ing"
+        run: |
+          echo "Sleeping 20 seconds"
+          sleep 20
+          echo "Oppia-ing"
 
