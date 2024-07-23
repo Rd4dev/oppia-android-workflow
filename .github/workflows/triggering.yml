@@ -2,7 +2,7 @@ name: triggering
 
 on:
   workflow_run:
-    workflows: ["arrow"]
+    workflows: [arrow]
     types:
       - completed
 
