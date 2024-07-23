@@ -18,4 +18,3 @@ jobs:
           echo "Sleeping 30 seconds"
           sleep 30
           echo "twff-ing"
-
