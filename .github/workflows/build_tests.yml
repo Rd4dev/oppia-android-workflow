@@ -11,7 +11,7 @@ on:
       - develop
 
 concurrency:
-  group: cancel-workflow-same-group-1
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
