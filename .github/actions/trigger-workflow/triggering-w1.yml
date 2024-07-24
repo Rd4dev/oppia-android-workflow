@@ -1,0 +1,11 @@
+name: triggering-w1
+
+on: [workflow_call]
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Triggering-w1
+        run: echo "Triggering tring w1"
+
