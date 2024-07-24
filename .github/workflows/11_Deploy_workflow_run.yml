@@ -1,13 +1,11 @@
-name: 11. Workflow Run Event
+name: Deploy Workflow
+
 on:
-  workflow_call
+  workflow_call:  # Make this workflow callable
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Deploy Application
-        run: |
-          echo "Starting Deploying the Application"
-          echo "Application Deployed"
+      - name: Deploy Step
+        run: echo "Running deploy steps"
