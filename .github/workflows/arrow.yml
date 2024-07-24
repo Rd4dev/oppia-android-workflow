@@ -9,5 +9,4 @@ on:
 
 jobs:
   arrowing:
-    runs-on: ubuntu-latest
-    - uses: ./.github/workflows/triggering.yml  # Reference reusable workflow
+    uses: ./.github/workflows/triggering.yml

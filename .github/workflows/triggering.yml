@@ -1,5 +1,7 @@
 name: triggering
 
+on: [workflow_call]
+
 jobs:
   trigger:
     runs-on: ubuntu-latest
