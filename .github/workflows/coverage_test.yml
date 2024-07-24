@@ -19,9 +19,9 @@ jobs:
       - name: Wait for unit tests to succeed
         uses: lewagon/wait-on-check-action@v1.3.4
         with:
-          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+#          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          ref: ${{ github.ref }}
           running-workflow-name: 'Unit Tests (Robolectric - Bazel)'
-          check-name: 'Check Bazel Test Results'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           wait-interval: 30
 
