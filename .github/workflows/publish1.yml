@@ -20,3 +20,13 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           wait-interval: 30
 
+  publish2:
+    name: Publish the package2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Running echo after waiting
+        run: |
+          echo "Running echo after waiting"
+          sleep 30
+          echo "echoing"
+
