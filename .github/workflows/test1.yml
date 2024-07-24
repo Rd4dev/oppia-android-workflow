@@ -11,6 +11,6 @@ jobs:
   test1:
     name: Run tests1
     runs-on: ubuntu-latest
-      steps:
-        - name: Running Test1
-          run: echo "Running test 1"
+    steps:
+      - name: Running Test1
+        run: echo "Running test 1"
