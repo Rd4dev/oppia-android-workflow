@@ -8,5 +8,6 @@ on:
       - develop
 
 jobs:
-  - name: Call Deploy Workflow
-    uses: ./.github/workflows/11_Deploy_workflow_run.yml
+  testing_workflow:
+    - name: Call Deploy Workflow
+      uses: ./.github/workflows/11_Deploy_workflow_run.yml
