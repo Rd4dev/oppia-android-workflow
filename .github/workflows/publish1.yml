@@ -1,4 +1,4 @@
-name: Publish1
+name: publish1
 
 on:
   workflow_dispatch:
@@ -8,7 +8,7 @@ on:
       - develop
 
 jobs:
-  publish:
+  publish1:
     name: Publish the package
     runs-on: ubuntu-latest
     steps:
@@ -16,7 +16,7 @@ jobs:
         uses: lewagon/wait-on-check-action@v1.3.4
         with:
           ref: ${{ github.ref }}
-          check-name: 'Run tests'
+          check-name: 'Run tests1'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           wait-interval: 10
 

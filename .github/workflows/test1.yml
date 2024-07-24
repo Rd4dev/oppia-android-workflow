@@ -1,10 +1,15 @@
-name: Test1
+name: test1
 
-on: [push]
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - develop
 
 jobs:
-  test:
-    name: Run tests
+  test1:
+    name: Run tests1
     runs-on: ubuntu-latest
       steps:
         - name: Running Test1
