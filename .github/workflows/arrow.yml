@@ -9,6 +9,12 @@ on:
 
 jobs:
   arrowing:
+    runs-on: ubuntu-latest
     steps:
-      - name: calling
-      uses: ./.github/workflows/triggering.yml
+      - uses: actions/checkout@v3  # Add this line
+      - name: Arrowing
+        run: |
+          echo "Sleeping 30 seconds"
+          sleep 30
+          echo "Arrowing-ing"
+      - uses: ./.github/workflows/triggering.yml  # Reference reusable workflow
