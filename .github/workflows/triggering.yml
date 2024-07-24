@@ -1,15 +1,9 @@
 name: triggering
 
-on:
-  workflow_run:
-    workflows: [arrow]
-    types:
-      - completed
-
 jobs:
   trigger:
     runs-on: ubuntu-latest
-
     steps:
       - name: Tring
         run: echo "Triggering tring"
+
