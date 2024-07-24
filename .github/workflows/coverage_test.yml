@@ -17,13 +17,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Wait for unit tests to succeed
-        uses: lewagon/wait-on-check-action@v1.3.4
+        uses: ArcticLampyrid/action-wait-for-workflow@v1
         with:
-#          ref: ${{ github.event.pull_request.head.sha || github.sha }}
-          ref: ${{ github.head_ref }}
-          running-workflow-name: 'Unit Tests (Robolectric - Bazel)'
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          wait-interval: 30
+          workflow: unit_tests.yml
+          sha: ${{ github.sha }}
+
+
+
+#        uses: lewagon/wait-on-check-action@v1.3.4
+#        with:
+##          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+#          ref: ${{ github.head_ref }}
+#          running-workflow-name: 'Unit Tests (Robolectric - Bazel)'
+#          repo-token: ${{ secrets.GITHUB_TOKEN }}
+#          wait-interval: 30
 
   bazel_compute_affected_targets_after_trigger:
     name: Compute affected tests after unit tests pass
