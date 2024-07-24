@@ -9,5 +9,7 @@ on:
 
 jobs:
   testing_workflow:
-    - name: Call Deploy Workflow
-      uses: ./.github/workflows/11_Deploy_workflow_run.yml
+    name: Testing 10
+      steps:
+        - name: Call Deploy Workflow
+          uses: ./.github/workflows/11_Deploy_workflow_run.yml
