@@ -5,13 +5,11 @@ on:
   pull_request:
   push:
     branches:
-      # Push events on develop branch
       - develop
 
 jobs:
   testing_workflow:
     runs-on: ubuntu-latest
-
     steps:
       - name: Call Deploy Workflow
         uses: ./.github/workflows/11_Deploy_workflow_run.yml
