@@ -21,6 +21,7 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
           running-workflow-name: 'Unit Tests (Robolectric - Bazel)'
+          check-name: 'Check Bazel Test Results'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           wait-interval: 30
 
