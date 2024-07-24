@@ -1,11 +1,10 @@
 name: triggering-w1
+description: 'composite run action'
 
-on: [workflow_call]
-
-jobs:
-  trigger:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Triggering-w1
-        run: echo "Triggering tring w1"
+runs:
+  using: "composite"
+  steps:
+    - name: Triggering-w1
+      shell: bash
+      run: echo "Triggering tring w1"
 
