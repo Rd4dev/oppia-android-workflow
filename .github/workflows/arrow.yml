@@ -9,4 +9,6 @@ on:
 
 jobs:
   arrowing:
-    uses: ./.github/workflows/triggering.yml
+    steps:
+      - name: calling
+      uses: ./.github/workflows/triggering.yml
