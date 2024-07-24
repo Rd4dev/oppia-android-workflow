@@ -20,6 +20,3 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           wait-interval: 10
 
-      - name: Publishing
-          run: echo "Publishing publish"
-
