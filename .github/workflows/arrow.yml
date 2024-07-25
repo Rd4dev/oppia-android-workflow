@@ -16,3 +16,10 @@ jobs:
 
       - name: Arrowing
         uses: ./.github/actions/trigger-workflow
+
+      - name: Upload comment
+        uses: peter-evans/create-or-update-comment@v1
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            Thanks for submitting this pull request :tada:!
