@@ -9,6 +9,7 @@ on:
 
 jobs:
   upload-comment:
+    runs-on: ubuntu-latest
     steps:
       - name: Upload comment
         uses: peter-evans/create-or-update-comment@v1
