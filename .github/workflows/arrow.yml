@@ -17,6 +17,8 @@ jobs:
       - name: Arrowing
         uses: ./.github/actions/trigger-workflow
 
+  upload-comment:
+    steps:
       - name: Upload comment
         uses: peter-evans/create-or-update-comment@v1
         with:
