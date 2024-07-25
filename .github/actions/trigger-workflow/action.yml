@@ -1,0 +1,10 @@
+name: triggering-w1
+description: 'composite run action'
+
+runs:
+  using: "composite"
+  steps:
+    - name: Triggering-w1
+      shell: bash
+      run: echo "Triggering tring w1"
+

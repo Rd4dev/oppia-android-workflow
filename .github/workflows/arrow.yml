@@ -1,21 +1,31 @@
-name: arrow
+name: Commenting on PR
 
 on:
-  workflow_dispatch:
   pull_request:
-  push:
-    branches:
-      # Push events on develop branch
-      - develop
+    types: [opened, synchronize]
 
 jobs:
-  arrowing:
+  comment-message:
+    permissions:
+      pull-requests: write
+
     runs-on: ubuntu-latest
-
+    if: true
     steps:
-      - name: Arrowing
-        run: |
-          echo "Sleeping 30 seconds"
-          sleep 30
-          echo "Arrowing-ing"
-
+      - name: Add comment
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            Thanks for submitting this pull request :tada:!
+#      - name: Create comment
+#        uses: peter-evans/create-or-update-comment@v4
+#        with:
+#          issue-number: 7
+#          body: |
+#            This is a multi-line test comment
+#            - With GitHub **Markdown** :sparkles:
+#            - Created by [create-or-update-comment][1]
+#
+#            [1]: https://github.com/peter-evans/create-or-update-comment
+#          reactions: '+1'

@@ -1,0 +1,32 @@
+name: publish1
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - develop
+
+jobs:
+  publish1:
+    name: Publish the package
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for tests to succeed
+        uses: lewagon/wait-on-check-action@v1.3.4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          check-name: 'Run tests1'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          wait-interval: 10
+
+  publish2:
+    name: Publish the package2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Running echo after waiting
+        run: |
+          echo "Running echo after waiting"
+          sleep 30
+          echo "echoing"
+

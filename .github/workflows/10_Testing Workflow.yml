@@ -1,13 +1,12 @@
 name: 10. Testing Workflow
+
 on:
-  - workflow_dispatch
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - develop
 
 jobs:
-  runs-on: ubuntu-latest
-
-    steps:
-      - name: TWF
-        run: |
-          echo "Sleeping 30 seconds"
-          sleep 30
-          echo "twff-ing"
+  testing_workflow:
+    uses: ./.github/workflows/11_Deploy_workflow_run.yml
