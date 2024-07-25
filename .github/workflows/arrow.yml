@@ -8,15 +8,6 @@ on:
       - develop
 
 jobs:
-#  arrowing:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: Checkout repo
-#        uses: actions/checkout@v3  # Add this line
-#
-#      - name: Arrowing
-#        uses: ./.github/actions/trigger-workflow
-
   upload-comment:
     steps:
       - name: Upload comment
