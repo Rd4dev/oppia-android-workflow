@@ -6,6 +6,9 @@ on:
 
 jobs:
   comment-message:
+    permissions:
+      pull-requests: write
+
     runs-on: ubuntu-latest
     if: true
     steps:
