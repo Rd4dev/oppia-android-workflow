@@ -1,18 +1,15 @@
-name: arrow
+name: Commenting on PR
 
 on:
-  workflow_dispatch:
   pull_request:
-  push:
-    branches:
-      - develop
+    types: [opened, synchronize]
 
 jobs:
-  upload-comment:
+  comment-message:
     runs-on: ubuntu-latest
     if: true
     steps:
-      - name: Upload comment
+      - name: Add comment
         uses: peter-evans/create-or-update-comment@v1
         with:
           issue-number: ${{ github.event.pull_request.number }}
